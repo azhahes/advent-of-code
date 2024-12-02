@@ -11,14 +11,14 @@ import (
 )
 
 func part1(filePath string) int {
-	f := file.OpenP(filePath)
+	f := file.Open(filePath)
 	left, right := make([]int, 0), make([]int, 0)
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		line := scanner.Text()
 		words := strings.Fields(line)
-		left = append(left, parse.ParseInt(words[0]))
-		right = append(right, parse.ParseInt(words[1]))
+		left = append(left, parse.Int(words[0]))
+		right = append(right, parse.Int(words[1]))
 	}
 	sort.Ints(left)
 	sort.Ints(right)
@@ -31,14 +31,14 @@ func part1(filePath string) int {
 }
 
 func part2(filePath string) int {
-	f := file.OpenP(filePath)
+	f := file.Open(filePath)
 	left, rightCount := make([]int, 0), make(map[int]int, 0)
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		line := scanner.Text()
 		words := strings.Fields(line)
-		left = append(left, parse.ParseInt(words[0]))
-		right := parse.ParseInt(words[1])
+		left = append(left, parse.Int(words[0]))
+		right := parse.Int(words[1])
 		if _, ok := rightCount[right]; ok {
 			rightCount[right]++
 		} else {
