@@ -2,11 +2,11 @@ package day1
 
 import (
 	"bufio"
-	"math"
 	"sort"
 	"strings"
 
 	"github.com/azhahes/advent-of-code/2024/file"
+	"github.com/azhahes/advent-of-code/2024/math"
 	"github.com/azhahes/advent-of-code/2024/parse"
 )
 
@@ -24,7 +24,7 @@ func part1(filePath string) int {
 	sort.Ints(right)
 	sum := 0
 	for i, v := range left {
-		diff := int(math.Abs(float64(v - right[i])))
+		diff := math.Abs(v - right[i])
 		sum += diff
 	}
 	return sum
