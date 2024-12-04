@@ -7,6 +7,7 @@ Welcome to my repository for solving the [Advent of Code 2024](https://adventofc
 | Day | Part 1 | Part 2 |
 |-----|--------|--------|
 | 1   | ✅      | ✅      |
+| 2   | ✅      | ✅      |
 
 ## Benchmarks
 
@@ -16,6 +17,8 @@ Below are the benchmark results for each day's solution:
 |------|-------------------|--------------|---------------|-------------------------|
 | 1    | 1   | 108646       | 102632       | 2028                     |
 | 1    | 2   | 129653       | 120674       | 2059                     |
+| 2    | 1   | 155085       | 243928       | 3015                     |
+| 2    | 2   | 345932       | 572379       | 10950                     |
 
 # Contributions
 
@@ -24,4 +27,3 @@ This is a personal project, but feel free to share ideas or suggest optimization
 # License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
-

@@ -18,29 +18,49 @@ func part1(filePath string) int {
 	}
 	var safeReports int
 	for _, level := range reports {
-		if len(level) == 1 {
-			safeReports++
-		}
-		if checkDecreasing(level, 1, 3) || checkIncreasing(level, 1, 3) {
+		if validateReport(level) {
 			safeReports++
 		}
 	}
 	return safeReports
 }
 
-func checkIncreasing(level []int, min, max int) bool {
-	for i := 1; i < len(level); i++ {
-		diff := level[i] - level[i-1]
-		if diff < min || diff > max {
-			return false
+func part2(filePath string) int {
+	f := file.MustOpen(filePath)
+	scanner := bufio.NewScanner(f)
+	reports := make([][]int, 0)
+	for scanner.Scan() {
+		levels := strings.Fields(scanner.Text())
+		reports = append(reports, parse.MustToIntSlice(levels))
+	}
+	var safeReports int
+	for _, level := range reports {
+		if validateReport(level) || checkWithFaultyLevel(level) {
+			safeReports++
 		}
 	}
-	return true
+	return safeReports
 }
 
-func checkDecreasing(level []int, min, max int) bool {
+func validateReport(report []int) bool {
+	return checkOrder(report, 1, 3, func(a, b int) int { return b - a }) ||
+		checkOrder(report, 1, 3, func(a, b int) int { return a - b })
+}
+
+func checkWithFaultyLevel(report []int) bool {
+	for i := range len(report) {
+		newReport := append([]int{}, report[:i]...)
+		newReport = append(newReport, report[i+1:]...)
+		if validateReport(newReport) {
+			return true
+		}
+	}
+	return false
+}
+
+func checkOrder(level []int, min, max int, order func(int, int) int) bool {
 	for i := 1; i < len(level); i++ {
-		diff := level[i-1] - level[i]
+		diff := order(level[i-1], level[i])
 		if diff < min || diff > max {
 			return false
 		}
