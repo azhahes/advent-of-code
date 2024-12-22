@@ -9,6 +9,7 @@ Welcome to my repository for solving the [Advent of Code 2024](https://adventofc
 | 1   | ✅      | ✅      |
 | 2   | ✅      | ✅      |
 | 3   | ✅      | ✅      |
+| 4   | ✅      | ✅      |
 
 ## Benchmarks
 
@@ -22,6 +23,8 @@ Below are the benchmark results for each day's solution:
 | 2    | 2   | 345932       | 572379       | 10950                     |
 | 3    | 1   | 282427       | 185418       | 3213                     |
 | 3    | 2   | 535994       | 198868       | 2807                     |
+| 4    | 1   | 759571       | 59077       | 2040                     |
+| 4    | 2   | 281203       | 31607       | 324                     |
 
 # Contributions
 
