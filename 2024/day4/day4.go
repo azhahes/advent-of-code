@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"fmt"
 
-	"github.com/azhahes/advent-of-code/2024/file"
+	"github.com/azhahes/advent-of-code/util/file"
 )
 
 const (

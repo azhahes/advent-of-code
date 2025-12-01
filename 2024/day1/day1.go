@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/azhahes/advent-of-code/2024/file"
-	"github.com/azhahes/advent-of-code/2024/math"
-	"github.com/azhahes/advent-of-code/2024/parse"
+	"github.com/azhahes/advent-of-code/util/file"
+	"github.com/azhahes/advent-of-code/util/math"
+	"github.com/azhahes/advent-of-code/util/parse"
 )
 
 func part1(filePath string) int {

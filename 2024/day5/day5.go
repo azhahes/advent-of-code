@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"strings"
 
-	"github.com/azhahes/advent-of-code/2024/file"
-	"github.com/azhahes/advent-of-code/2024/parse"
+	"github.com/azhahes/advent-of-code/util/file"
+	"github.com/azhahes/advent-of-code/util/parse"
 )
 
 type pages struct {
