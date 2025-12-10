@@ -1,0 +1,23 @@
+package day{{.Day}}
+
+import "testing"
+
+func BenchmarkPart1(b *testing.B) {
+	b.ReportAllocs()
+	filePath := "input.txt"
+
+	// Run the benchmark N times.
+	for i := 0; i < b.N; i++ {
+		_ = Part1(filePath)
+	}
+}
+
+func BenchmarkPart2(b *testing.B) {
+	b.ReportAllocs()
+	filePath := "input.txt"
+
+	// Run the benchmark N times.
+	for i := 0; i < b.N; i++ {
+		_ = Part2(filePath)
+	}
+}
