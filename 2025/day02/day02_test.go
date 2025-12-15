@@ -8,17 +8,17 @@ func TestPart1(t *testing.T) {
 	testCases := []struct {
 		name     string
 		filePath string
-		expected int
+		expected int64
 	}{
 		{
 			name:     "Sample input",
 			filePath: "sample-input.txt",
-			expected: 0,
+			expected: 1227775554,
 		},
 		{
 			name:     "Actual input",
 			filePath: "input.txt",
-			expected: 0,
+			expected: 40055209690,
 		},
 	}
 
@@ -37,17 +37,17 @@ func TestPart2(t *testing.T) {
 	testCases := []struct {
 		name     string
 		filePath string
-		expected int
+		expected int64
 	}{
 		{
 			name:     "Sample input",
 			filePath: "sample-input.txt",
-			expected: 0,
+			expected: 4174379265,
 		},
 		{
 			name:     "Actual input",
 			filePath: "input.txt",
-			expected: 0,
+			expected: 50857215650,
 		},
 	}
 
