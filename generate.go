@@ -62,9 +62,6 @@ func main() {
 	// generate dayXX_test.go
 	writeTemplate("tmpl/day_test.go.tmpl",
 		filepath.Join(dayDir, "day"+day+"_test.go"), data)
-	// generate dayXX_bench_test.go
-	writeTemplate("tmpl/day_bench_test.go.tmpl",
-		filepath.Join(dayDir, "day"+day+"_bench_test.go"), data)
 
 	// create empty input.txt
 	os.WriteFile(filepath.Join(dayDir, "input.txt"), []byte{}, 0o644)
